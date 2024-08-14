@@ -3,12 +3,177 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Primal Genes</title>
 </head>
 <body>
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-</h1>
+
+<!--(Sticky) Navbar-->
+
+<nav class="container mx-auto sticky top-0 rounded-lg border-gray-500 bg-gray-300 shadow-xl">
+    <div class="max-w-screen-xl flex flex-wrap flex-row items-center gap-10 md:gap-0 justify-end mx-auto p-4">
+        <a href="#" class="flex basis-1/2  md:basis-1/6">
+            <!--PRIMAL GENES LOGO INSERT-->
+            <img src="public/Primal.jpg" class="max-h-64 md:max-h-40 rounded-2xl border-black border-2" alt="Primal Genes Logo" />
+            <!--<span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>-->
+        </a>
+        <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-solid-bg" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+            <ul class="mr-4 flex flex-col font-sans xl:text-xl mt-4 rounded-lg bg-gray-50 md:space-x-10 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent ">
+                <li>
+                    <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded md:bg-transparent md:hover:bg-transparent md:border-0 md:hover:text-blue-700" aria-current="page">Our Team</a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Testimonials</a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--Static Image-->
+
+<div class="container mx-auto xl:max-w-screen-xl">
+    <div class="">
+        <ul>
+            <li>
+                <img class="my-6 w-full h-full sm:rounded-2xl" src="https://images.unsplash.com/photo-1463680821868-35b3a7410f06?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mountain placeholder picture">
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--About me-->
+
+<section class="container mx-auto bg-gray-400">
+    <div class="flex">
+        <h2 class="flex justify-start m-10 text-4xl">Our Team</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+        <div>
+            <div class="px-20">
+                <img class="shadow-md mx-auto rounded-2xl" src="public/IMG_7075.jpg" alt="Jeff Cuno Picture"/>
+            </div>
+            <div class="grid mx-auto">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus quis ipsum ut elementum. Maecenas gravida, erat eget feugiat sodales, leo lacus mollis tortor, a luctus massa enim quis mi. Maecenas eget libero id turpis elementum fermentum at at elit. Vestibulum et dignissim diam. Maecenas iaculis accumsan tortor eu vehicula. Sed lorem orci, viverra vitae ligula sed, ullamcorper sagittis elit. Maecenas ut purus ultrices leo interdum cursus. Suspendisse vitae arcu quis nulla porttitor molestie. Praesent consequat congue molestie. Fusce gravida varius lacus, sit amet porttitor massa tincidunt sed. Phasellus ac massa tincidunt, lobortis dui ut, tristique arcu. Nulla facilisis vehicula feugiat.
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="px-20">
+                <img class="shadow-md mx-auto rounded-2xl" src="public/IMG_7050.jpg" alt="Sam Cuno Picture" />
+            </div>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus quis ipsum ut elementum. Maecenas gravida, erat eget feugiat sodales, leo lacus mollis tortor, a luctus massa enim quis mi. Maecenas eget libero id turpis elementum fermentum at at elit. Vestibulum et dignissim diam. Maecenas iaculis accumsan tortor eu vehicula. Sed lorem orci, viverra vitae ligula sed, ullamcorper sagittis elit. Maecenas ut purus ultrices leo interdum cursus. Suspendisse vitae arcu quis nulla porttitor molestie. Praesent consequat congue molestie. Fusce gravida varius lacus, sit amet porttitor massa tincidunt sed. Phasellus ac massa tincidunt, lobortis dui ut, tristique arcu. Nulla facilisis vehicula feugiat.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Services Section-->
+
+<section class="container mx-auto bg-white">
+    <div class="flex">
+        <h2 class="flex justify-start p-6 text-4xl">Services</h2>
+    </div>
+</section>
+<section class="bg-gray-500 py-16">
+    <div class="container mx-auto flex-col flex lg:flex-row gap-12">
+        <div class="basis-1/6 lg:px-0 px-12 ">
+            <img class="mx-auto" src="public/Primal.jpg" alt="placeholder image">
+        </div>
+        <div class="basis-5/6 lg:px-0 px-6">
+            <p>hantey jack schooner lad splice the main brace hogshead deadlights brigantine Jolly Roger Shiver me timbers. Chantey run a shot across the bow lugsail spirits keelhaul cog dance the hempen jig gaff tender American Main. Bilged on her anchor log crack Jennys tea cup fire ship reef sails lugsail square-rigged boom nipperkin chantey.</p>
+            <p>hantey jack schooner lad splice the main brace hogshead deadlights brigantine Jolly Roger Shiver me timbers. Chantey run a shot across the bow lugsail spirits keelhaul cog dance the hempen jig gaff tender American Main. Bilged on her anchor log crack Jennys tea cup fire ship reef sails lugsail square-rigged boom nipperkin chantey.</p>
+        </div>
+    </div>
+</section>
+
+<section class="bg-gray-300 py-16">
+    <div class="container mx-auto flex-col flex lg:flex-row gap-12">
+        <div class="basis-1/6 lg:px-0 px-12 ">
+            <img class="mx-auto" src="public/Primal.jpg" alt="placeholder image">
+        </div>
+        <div class="basis-5/6 lg:px-0 px-6">
+            <p>hantey jack schooner lad splice the main brace hogshead deadlights brigantine Jolly Roger Shiver me timbers. Chantey run a shot across the bow lugsail spirits keelhaul cog dance the hempen jig gaff tender American Main. Bilged on her anchor log crack Jennys tea cup fire ship reef sails lugsail square-rigged boom nipperkin chantey.</p>
+            <p>hantey jack schooner lad splice the main brace hogshead deadlights brigantine Jolly Roger Shiver me timbers. Chantey run a shot across the bow lugsail spirits keelhaul cog dance the hempen jig gaff tender American Main. Bilged on her anchor log crack Jennys tea cup fire ship reef sails lugsail square-rigged boom nipperkin chantey.</p>
+        </div>
+    </div>
+</section>
+
+<section class="bg-gray-100 py-16">
+    <div class="container mx-auto flex-col flex lg:flex-row gap-12">
+        <div class="basis-1/6 lg:px-0 px-12 ">
+            <img class="mx-auto" src="public/Primal.jpg" alt="placeholder image">
+        </div>
+        <div class="basis-5/6 lg:px-0 px-6">
+            <p>hantey jack schooner lad splice the main brace hogshead deadlights brigantine Jolly Roger Shiver me timbers. Chantey run a shot across the bow lugsail spirits keelhaul cog dance the hempen jig gaff tender American Main. Bilged on her anchor log crack Jennys tea cup fire ship reef sails lugsail square-rigged boom nipperkin chantey.</p>
+            <p>hantey jack schooner lad splice the main brace hogshead deadlights brigantine Jolly Roger Shiver me timbers. Chantey run a shot across the bow lugsail spirits keelhaul cog dance the hempen jig gaff tender American Main. Bilged on her anchor log crack Jennys tea cup fire ship reef sails lugsail square-rigged boom nipperkin chantey.</p>
+        </div>
+    </div>
+</section>
+<!--Carousel Flowbite Test-->
+
+
+<!--<div id="controls-carousel" class="container mx-auto w-full" data-carousel="static">
+    &lt;!&ndash; Carousel wrapper &ndash;&gt;
+    <div class="relative h-full w-full overflow-hidden">
+        &lt;!&ndash; Item 1 &ndash;&gt;
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="https://images.unsplash.com/photo-1463680821868-35b3a7410f06?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        &lt;!&ndash; Item 2 &ndash;&gt;
+        <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+            <img src="https://images.unsplash.com/photo-1463680821868-35b3a7410f06?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        &lt;!&ndash; Item 3 &ndash;&gt;
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="https://images.unsplash.com/photo-1463680821868-35b3a7410f06?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        &lt;!&ndash; Item 4 &ndash;&gt;
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="https://images.unsplash.com/photo-1463680821868-35b3a7410f06?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        &lt;!&ndash; Item 5 &ndash;&gt;
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="https://images.unsplash.com/photo-1463680821868-35b3a7410f06?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+    </div>
+    &lt;!&ndash; Slider controls &ndash;&gt;
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>-->
+
+<footer class="bg-black text-white py-14 text-left">
+    <p class="container mx-auto">Primal Genes @2024</p>
+</footer>
 
 <script type="module" src="/src/main.js"></script>
 </body>
