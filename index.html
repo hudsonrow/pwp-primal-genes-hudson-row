@@ -1,83 +1,143 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/style.css"/>
     <title>Primal Genes</title>
 </head>
-<body>
+<body class="font-mono">
 
 <!--(Sticky) Navbar-->
 
-<nav class=" mx-auto sticky top-0 rounded-lg border-slate-400 bg-slate-200 shadow-xl">
-    <div class="max-w-screen-xl flex flex-wrap flex-row items-center gap-10 md:gap-0 justify-between mx-auto p-2">
-        <a href="#" class="flex basis-1/2  md:basis-1/6">
+<nav class="mx-auto sticky top-0 z-50 border-slate-400 bg-white shadow-xl">
+    <div class="max-w-sm md:max-w-screen-xl flex flex-wrap flex-row items-center gap-10 md:gap-0 justify-between mx-auto p-2">
+        <a href="/" class="inline-flex basis-1/2  md:basis-1/6">
             <!--PRIMAL GENES LOGO INSERT-->
-            <img src="public/Primal.jpg" class="max-h-64 md:max-h-32 rounded-2xl shadow-md" alt="Primal Genes Logo" />
-            <span class="italic self-center text-xl text-slate-500 ml-6 font-bold whitespace-nowrap">Become human again</span>
+            <img src="public/Primal.svg" class="max-h-32 md:max-h-32 rounded-2xl shadow-md" alt="Primal Genes Logo" />
+            <span class="pl-4 flex-wrap italic self-center text-3xl text-yellow-400 ml-6 font-bold whitespace-nowrap">
+                Become
+                <span class="flex"> human </span>
+                <span> again.</span>
+            </span>
         </a>
-        <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-solid-bg" aria-expanded="false">
+        <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-0 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-solid-bg" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
             </svg>
         </button>
         <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
-            <ul class="mr-4 flex flex-col font-sans xl:text-xl mt-4 rounded-lg bg-gray-50 md:space-x-10 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent ">
-                <li>
-                    <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded md:bg-transparent md:hover:bg-transparent md:border-0 md:hover:text-blue-700" aria-current="page">Our Team</a>
+            <ul class="text-center mr-4 flex flex-col font-mono xl:text-xl mt-0 rounded-lg bg-white md:space-x-10 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent ">
+                <li id="ourteam-btn" class="block py-2 px-3 pr-2 pl-3 text-white bg-yellow-400 md:rounded md:hover:bg-transparent md:border-0 md:hover:text-slate-400" aria-current="page">Our Team
                 </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700">Services</a>
+                <li id="services-btn" class="block py-2 px-3 pl-3 text-white bg-yellow-400 md:rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-slate-400">Services
                 </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white">Testimonials</a>
+                <li id="testimonials-btn" class="block py-2 px-3 pl-3 text-white bg-yellow-400 md:rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-slate-400">Testimonials
                 </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700">Contact</a>
+                <li id="contact-btn" class="block py-2 px-3 pl-3 text-white bg-yellow-400 md:rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-slate-400">Contact
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!--Static Image (adding carousel later)-->
+<!--Masonry Gallery-->
 
-<div class="container mx-auto xl:max-w-screen-xl">
-    <div class="">
-        <ul>
-            <li>
-                <img class="my-6 w-full h-full sm:rounded-2xl" src="https://images.unsplash.com/photo-1463680821868-35b3a7410f06?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mountain placeholder picture">
-            </li>
-        </ul>
+<section class="absolute z-10 md:ml-10 lg:ml-72 top-1/3">
+    <section class="bg-slate-500 bg-opacity-90 mx-0 top-1/2">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-10">
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-slate-200 md:text-5xl lg:text-6xl">Embrace <span class="italic hover:text-yellow-500">Human</span> Instincts</h1>
+            <p class="mb-4 text-lg font-normal text-slate-200 lg:text-xl sm:px-16 lg:px-96 ">Challenge your body, Eat well, Find your tribe, Practice mindfulness through the noise of everyday life</p>
+        </div>
+    </section>
+</section>
+
+<section class="relative">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="grid gap-20">
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="public/racestart.jpg" alt="">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="public/jackassv2.jpg" alt="">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="public/IMG_6849.jpg" alt="">
+            </div>
+        </div>
+        <div class="grid gap-12">
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="public/MtTaylor_2023_AB-5226.jpg" alt="Jeff Cuno racing">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="public/IMG_7157.jpg" alt="Sam and Leen on the river">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="public/running.jpg" alt="Jeff Cuno running on a trail">
+            </div>
+        </div>
+        <div class="grid gap-14">
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="public/MtTaylor_2023-TM-0222.jpg" alt="Jeff cuno in a race">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="public/jefemedal.jpg" alt="Jeff Cuno winning medal">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="public/hillclimb.jpg" alt="Jeff Cuno racing">
+            </div>
+        </div>
+        <div class="grid gap-6">
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="public/6A048A3A-7C21-4C28-8974-5FE518F581C7.JPG" alt="Jeff cuno on top of mountain">
+            </div>
+            <div>
+                <img class="h-auto md:h-[400px] w-full rounded-lg" src="https://plus.unsplash.com/premium_photo-1712681721261-e23b117516ff?q=80&w=2042&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="New Mexico Topographical overview">
+            </div>
+            <div>
+                <img id="ourteam" class="h-auto max-w-full rounded-lg" src="https://plus.unsplash.com/premium_photo-1672527067038-2911a735b418?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="New Mexico foothills">
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
-<!--About me-->
+<!--Our Team-->
 
-<section class="bg-gray-400 border rounded-xl">
-    <div class="flex">
-        <h2 class="flex justify-start m-10 text-4xl">Our Team</h2>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+<section  class="bg- border rounded-xl">
+        <div class="py-10 text-center text-4xl font-mono font-bold">
+            <h3>Our Team</h3>
+        </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
         <div>
             <div class="px-20">
-                <img class="shadow-md mx-auto rounded-2xl" src="public/IMG_7075.jpg" alt="Jeff Cuno Picture"/>
+                <h3 class="text-center text-4xl mb-2">Jeff Cuno</h3>
+                <img class="mb-4 shadow-md mx-auto md:h-[500px] rounded-full" src="public/jackass.jpg" alt="Jeff Cuno Picture"/>
             </div>
-            <div class="grid mx-auto">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus quis ipsum ut elementum. Maecenas gravida, erat eget feugiat sodales, leo lacus mollis tortor, a luctus massa enim quis mi. Maecenas eget libero id turpis elementum fermentum at at elit. Vestibulum et dignissim diam. Maecenas iaculis accumsan tortor eu vehicula. Sed lorem orci, viverra vitae ligula sed, ullamcorper sagittis elit. Maecenas ut purus ultrices leo interdum cursus. Suspendisse vitae arcu quis nulla porttitor molestie. Praesent consequat congue molestie. Fusce gravida varius lacus, sit amet porttitor massa tincidunt sed. Phasellus ac massa tincidunt, lobortis dui ut, tristique arcu. Nulla facilisis vehicula feugiat.
-                </p>
+            <div class="grid container text-center mx-auto mb-4">
+                <ul>
+                    <li class="font-bold mb-2">10+ Years of Trail Running</li>
+                    <li class="mb-2">(1st Place) 2022 & 2023 & 2024 Taos Up And Over Vert + 10k</li>
+                    <li class="mb-2">(1st Place) 2024 Amasa 25k</li>
+                    <li class="mb-2">(1st Place) 2023 Bull of the Woods - 1/2 Marathon</li>
+                    <li class="mb-2">(1st Place) 2023 Cedro Peak - 15 Miler</li>
+                    <li class="mb-2">Multiple FKT's in Albuquerque and Colorado</li>
+                </ul>
             </div>
         </div>
         <div>
             <div class="px-20">
-                <img class="shadow-md mx-auto rounded-2xl" src="public/IMG_7050.jpg" alt="Sam Cuno Picture" />
+                <h3 class="text-center text-4xl mb-2">Sam Cuno</h3>
+                <img class="mb-4 shadow-md mx-auto md:h-[500px] rounded-full" src="public/IMG_5595.jpg" alt="Sam Cuno Picture" />
             </div>
-            <div>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus quis ipsum ut elementum. Maecenas gravida, erat eget feugiat sodales, leo lacus mollis tortor, a luctus massa enim quis mi. Maecenas eget libero id turpis elementum fermentum at at elit. Vestibulum et dignissim diam. Maecenas iaculis accumsan tortor eu vehicula. Sed lorem orci, viverra vitae ligula sed, ullamcorper sagittis elit. Maecenas ut purus ultrices leo interdum cursus. Suspendisse vitae arcu quis nulla porttitor molestie. Praesent consequat congue molestie. Fusce gravida varius lacus, sit amet porttitor massa tincidunt sed. Phasellus ac massa tincidunt, lobortis dui ut, tristique arcu. Nulla facilisis vehicula feugiat.
-                </p>
+            <div class="grid container text-center mx-auto">
+                <ul id="services">
+                    <li class="font-bold mb-2">NASM Certified Personal Trainer</li>
+                    <li class="font-bold mb-2">10+ Years of Personal Training Experience</li>
+                    <li class="mb-2">Associates of Occupational Studies Degree in Personal Training from Heritage College</li>
+                    <li class="mb-2">First Aid/CPR/AED Certified</li>
+                    <li class="mb-2">Specialties in strength training and nutrition.</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -85,56 +145,135 @@
 
 <!--Services-->
 
-<section class="container mx-auto bg-white">
-    <div class="flex">
-        <h2 class="flex justify-start p-6 text-4xl">Services</h2>
-    </div>
-</section>
-<section class="bg-gray-500 py-16">
-    <div class="container mx-auto flex-col flex lg:flex-row gap-12">
-        <div class="basis-1/6 lg:px-0 px-12 ">
-            <img class="mx-auto" src="public/Primal.jpg" alt="placeholder image">
-        </div>
-        <div class="basis-5/6 lg:px-0 px-6">
-            <p>hantey jack schooner lad splice the main brace hogshead deadlights brigantine Jolly Roger Shiver me timbers. Chantey run a shot across the bow lugsail spirits keelhaul cog dance the hempen jig gaff tender American Main. Bilged on her anchor log crack Jennys tea cup fire ship reef sails lugsail square-rigged boom nipperkin chantey.</p>
-            <p>hantey jack schooner lad splice the main brace hogshead deadlights brigantine Jolly Roger Shiver me timbers. Chantey run a shot across the bow lugsail spirits keelhaul cog dance the hempen jig gaff tender American Main. Bilged on her anchor log crack Jennys tea cup fire ship reef sails lugsail square-rigged boom nipperkin chantey.</p>
-        </div>
+<section class="py-10 text-center">
+    <div class="text-4xl font-mono font-bold">
+        <h3>Services</h3>
     </div>
 </section>
 
-<section class="bg-gray-300 py-16">
-    <div class="container mx-auto flex-col flex lg:flex-row gap-12">
-        <div class="basis-1/6 lg:px-0 px-12 ">
-            <img class="mx-auto" src="public/Primal.jpg" alt="placeholder image">
-        </div>
-        <div class="basis-5/6 lg:px-0 px-6">
-            <p>hantey jack schooner lad splice the main brace hogshead deadlights brigantine Jolly Roger Shiver me timbers. Chantey run a shot across the bow lugsail spirits keelhaul cog dance the hempen jig gaff tender American Main. Bilged on her anchor log crack Jennys tea cup fire ship reef sails lugsail square-rigged boom nipperkin chantey.</p>
-            <p>hantey jack schooner lad splice the main brace hogshead deadlights brigantine Jolly Roger Shiver me timbers. Chantey run a shot across the bow lugsail spirits keelhaul cog dance the hempen jig gaff tender American Main. Bilged on her anchor log crack Jennys tea cup fire ship reef sails lugsail square-rigged boom nipperkin chantey.</p>
+<!--STANDARD RUN-->
+<div class=" flex flex-wrap gap-8 justify-center mb-20">
+    <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 ">
+        <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg pl-4" src="public/Primal.jpg" alt="">
+        <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 flex flex-wrap ">Standard Running Plan
+                <span class="bg-red-400 text-white flex-wrap pl-2 pr-2 mt-1 rounded">$120/Month</span>
+            </h5>
+            <ul class="list-disc ml-4">
+                <li class="mb-1 font-normal text-gray-900 ">Personalized 4-week training plan that fits your schedule/goals</li>
+                <li class="mb-1 font-normal text-gray-900 ">Biweekly phone call to discuss training/progress</li>
+                <li class="mb-1 font-normal text-gray-900 ">Unlimited text/email communications (24hr response time)</li>
+            </ul>
         </div>
     </div>
-</section>
+<!--RUN STRENGTH-->
+    <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 ">
+        <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg pl-4" src="public/Primal.jpg" alt="">
+        <div class="flex flex-col justify-between p-4 leading-normal">
 
-<section class="bg-gray-100 py-16">
-    <div class="container mx-auto flex-col flex lg:flex-row gap-12">
-        <div class="basis-1/6 lg:px-0 px-12 ">
-            <img class="mx-auto" src="public/Primal.jpg" alt="placeholder image">
-        </div>
-        <div class="basis-5/6 lg:px-0 px-6">
-            <p>hantey jack schooner lad splice the main brace hogshead deadlights brigantine Jolly Roger Shiver me timbers. Chantey run a shot across the bow lugsail spirits keelhaul cog dance the hempen jig gaff tender American Main. Bilged on her anchor log crack Jennys tea cup fire ship reef sails lugsail square-rigged boom nipperkin chantey.</p>
-            <p>hantey jack schooner lad splice the main brace hogshead deadlights brigantine Jolly Roger Shiver me timbers. Chantey run a shot across the bow lugsail spirits keelhaul cog dance the hempen jig gaff tender American Main. Bilged on her anchor log crack Jennys tea cup fire ship reef sails lugsail square-rigged boom nipperkin chantey.</p>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 flex flex-wrap ">Run / Strength Plan
+                <span class="bg-red-400 text-white flex-wrap pl-2 pr-2 mt-1 rounded">$200/Month</span>
+            </h5>
+            <ul class="list-disc ml-4">
+                <li class="mb-1 font-normal text-gray-900 ">Personalized 4 week training plan that fits your schedule/goals</li>
+                <li class="mb-1 font-normal text-gray-900 ">4 Gym Workouts (2x a week, cycled through twice)</li>
+                <li class="mb-1 font-normal text-gray-900 ">Tailored to your goals and running plan</li>
+                <li class="mb-1 font-normal text-gray-900 ">Video demonstrations of exercises</li>
+            </ul>
         </div>
     </div>
-</section>
+<!--STANDARD STRENGTH-->
+    <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 ">
+        <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg pl-4" src="public/Primal.jpg" alt="">
+        <div class="flex flex-col justify-between p-4 leading-normal">
+
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 flex flex-wrap ">Standard Strength Plan
+                <span class="bg-red-400 text-white flex-wrap pl-2 pr-2 mt-1 rounded">$80-$100/Month</span>
+            </h5>
+            <ul class="list-disc ml-4">
+                <li class="mb-1 font-normal text-gray-900 ">6-10 workouts (3-5x a week, cycled through twice)</li>
+                <li class="mb-1 font-normal text-gray-900 ">Customized to your goals/ability level</li>
+                <li class="mb-1 font-normal text-gray-900 ">Video demonstrations of exercises</li>
+            </ul>
+        </div>
+    </div>
+<!--BASIC RUN PLAN-->
+    <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 ">
+        <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg pl-4" src="public/Primal.jpg" alt="">
+        <div class="flex flex-col justify-between p-4 leading-normal">
+
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 flex flex-wrap ">Basic Run Plan
+                <span class="bg-red-400 text-white flex-wrap pl-2 pr-2 mt-1 rounded">$80-$100/Month</span>
+            </h5>
+            <ul id="testimonials" class="list-disc ml-4">
+                <li class="mb-1 font-normal text-gray-900 ">8-10 week detailed running plan</li>
+                <li class="mb-1 font-normal text-gray-900 ">Fit to goals, schedule, and ability</li>
+                <li class="mb-1 font-normal text-gray-900 ">1 time phone call to discuss details of plan</li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 <!--Testimonials Section-->
 
-<section>
-    <!--Needs Testimonial Card-->
-</section>
+<div class="grid gap-3 mb-8 border border-gray-200 rounded-lg shadow-sm  md:mb-12 md:grid-cols-2 bg-white">
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-slate-100 border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Reliable. Helped me get in the best shape of my life.</h3>
+            <p class="my-4">"Sam and Jeff are the best!"</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center ">
+            <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
+            <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                <div>Hudson Row</div>
+                <div class="text-sm text-gray-500 dark:text-gray-400 ">Web Developer / Pro BSer </div>
+            </div>
+        </figcaption>
+    </figure>
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-slate-100 border-b border-gray-200 md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Awaiting actual testimonials from the team.</h3>
+            <p class="my-4">"I had a blast making this project!"</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center ">
+            <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="profile picture">
+            <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                <div>Harry Rowland</div>
+                <div class="text-sm text-gray-500 dark:text-gray-400">Street Magician</div>
+            </div>
+        </figcaption>
+    </figure>
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-slate-100 border-b border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">If you want to run an UltraMarathon tomorrow, start today.</h3>
+            <p class="my-4">"Sounds inspirational right?"</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center ">
+            <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="profile picture">
+            <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                <div>Hannah Roland</div>
+                <div class="text-sm text-gray-500 dark:text-gray-400">Dolphin Trainer</div>
+            </div>
+        </figcaption>
+    </figure>
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-slate-100 border-gray-200 rounded-b-lg md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">You never stop learning. Ever.</h3>
+            <p class="my-4">"I learned to run and it was cool."</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center ">
+            <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="profile picture">
+            <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                <div>Horse Rock</div>
+                <div class="text-sm text-gray-500 dark:text-gray-400">Venture Capitalist</div>
+            </div>
+        </figcaption>
+    </figure>
+</div>
 
 <!--Contact-->
 
-<section class="bg-slate-500  py-20">
+<section id="contact" class="bg-slate-500  py-20">
 
     <div class="container mx-auto ">
             <div class="flex justify-around items-center p-6 text-4xl text-white flex-wrap gap-4" >
@@ -144,22 +283,21 @@
 
     <!--Profile Links-->
 
-
             <ul class="flex justify-around items-center flex-wrap gap-4">
 
-                <li class="flex flex-col items-start p-6 text-xl text-white mr-12">
+                <li class="flex flex-col items-start p-6 text-xl text-white md:mr-12">
                     <p>randomEmailFiller@yahoo.com</p>
                     <p>oneMoreEmailFiller@comcast.net</p>
                 </li>
 
-                <li class="flex flex-row mr-28"> <!--Instagram-->
+                <li class="flex flex-row md:mr-28"> <!--Instagram-->
                     <a href="https://www.instagram.com/primal.genes.coaching/" class="">
-                        <svg class="hover:text-blue-200 text-slate-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="75" height="75" fill="none" viewBox="0 0 24 24">
+                        <svg class="hover:text-blue-200 text-slate-800 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="75" height="75" fill="none" viewBox="0 0 24 24">
                             <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597    2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
                         </svg>
                     </a>
                     <a href="#" class=""> <!--Strava-->
-                        <svg class="hover:text-blue-200 text-slate-800 dark:text-white" aria-hidden="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="75" height="75"> <path fill="currentColor" d="M158.4 0L7 292h89.2l62.2-116.1L220.1 292h88.5zm150.2 292l-43.9 88.2-44.6-88.2h-67.6l112.2 220 111.5-220z"/></svg>
+                        <svg class="hover:text-blue-200 text-slate-800 " aria-hidden="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="75" height="75"> <path fill="currentColor" d="M158.4 0L7 292h89.2l62.2-116.1L220.1 292h88.5zm150.2 292l-43.9 88.2-44.6-88.2h-67.6l112.2 220 111.5-220z"/></svg>
                     </a>
                 </li>
 
@@ -175,53 +313,8 @@
     <p class="container mx-auto">Primal Genes @2024</p>
 </footer>
 
-<!--Carousel Flowbite Test-->
 
-<!--Lightbox instead of a Carousel?-->
-
-<!--<div id="controls-carousel" class="container mx-auto w-full" data-carousel="static">
-    &lt;!&ndash; Carousel wrapper &ndash;&gt;
-    <div class="relative h-full w-full overflow-hidden">
-        &lt;!&ndash; Item 1 &ndash;&gt;
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://images.unsplash.com/photo-1463680821868-35b3a7410f06?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        &lt;!&ndash; Item 2 &ndash;&gt;
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-            <img src="https://images.unsplash.com/photo-1463680821868-35b3a7410f06?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        &lt;!&ndash; Item 3 &ndash;&gt;
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://images.unsplash.com/photo-1463680821868-35b3a7410f06?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        &lt;!&ndash; Item 4 &ndash;&gt;
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://images.unsplash.com/photo-1463680821868-35b3a7410f06?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        &lt;!&ndash; Item 5 &ndash;&gt;
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://images.unsplash.com/photo-1463680821868-35b3a7410f06?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-    </div>
-    &lt;!&ndash; Slider controls &ndash;&gt;
-    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-            </svg>
-            <span class="sr-only">Previous</span>
-        </span>
-    </button>
-    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-            </svg>
-            <span class="sr-only">Next</span>
-        </span>
-    </button>
-</div>-->
-
+<script src="/src/script.js"></script>
 <script type="module" src="/src/main.js"></script>
 </body>
 </html>
