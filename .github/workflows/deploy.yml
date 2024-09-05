@@ -26,4 +26,4 @@
         - name: Deploy to server
           run: |
             ssh-keyscan -H primal-genes.com >> ~/.ssh/known_hosts 
-            scp -r ./dist/* gkephart@primal-genes.com:/var/www/primal-genes.com/html
+            scp -r ./dist/* hrow@primal-genes.com:/var/www/primal-genes.com/html
